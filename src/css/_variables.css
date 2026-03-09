@@ -21,6 +21,14 @@
     --fontWeightMedium: 500; 
     --fontWeightSemiBold: 600; 
     --fontWeightBold: 700; 
+
+    /*MEDIA QUERIES*/
+    --media-xs: 0px;
+    --media-sm: 576px;
+    --media-md: 769px;
+    --media-lg: 992px;
+    --media-xl: 1200px;
+    --media-xxl: 1440px;
 }
 
 html[data-theme="light"]{
