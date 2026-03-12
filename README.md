@@ -26,7 +26,7 @@ Este projecto é um portfólio pessoal desenvolvido em HTML, CSS e JavaScript va
 
 ## 👤 Autor
 
-**Viver de Código**
+**Rui Ribeiro**
 
 ## 📁 Estrutura do Projecto
 
