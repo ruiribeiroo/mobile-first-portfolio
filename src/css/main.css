@@ -80,7 +80,7 @@ section {
 
 
 /*MOBILE*/
-.primaryHeader .columnRight nav {
+.primaryHeader .columnRight>nav {
   display: none;
 }
 
@@ -113,14 +113,17 @@ section {
   align-items: center;
 }
 
-.primaryHeader .columnRight .btnOpenMenuMobile {
+.btnOpenMenuMobile,
+.btnCloseMenuMobile {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.primaryHeader .columnRight .btnOpenMenuMobile svg path {
+.btnOpenMenuMobile svg path,
+.btnCloseMenuMobile svg path {
   stroke: var(--colorbtnOpenMenuMobile);
+  padding: 0;
 }
 
 /*
@@ -401,6 +404,55 @@ section {
 }
 
 /*
+*
+* MENU MOBILE
+*
+*/
+
+.drawerMenu {
+  right: -300px;
+  top: 0;
+  position: fixed;
+  background-color: var(--background);
+  width: 100%;
+  max-width: calc(300px - 60px);
+  height: calc(100vh - 60px);
+  z-index: 100;
+  padding: 30px;
+  display: flex;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
+.drawerMenu.opened {
+  right: 0;
+  visibility: visible;
+}
+
+
+.drawerMenu nav ul li a {
+  font-size: 2.4rem;
+  line-height: 5rem;
+  color: var(--colorPrimaryMenu);
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid var(--colorBorder);
+}
+
+.drawerMenu nav ul li:last-child a {
+  border-bottom: none;
+}
+
+.drawerMenu nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*
 * START - MEDIA QUERIES FOR SECTON PROJECTS
 */
 @media (min-width: 576px) {
@@ -445,6 +497,17 @@ section {
 
 /*DESKTOP*/
 @media (min-width: 769px) {
+
+  /*
+*
+* MENU MOBILE
+*
+*/
+
+  .drawerMenu {
+    display: none;
+  }
+
 
   /*
 *
@@ -546,9 +609,15 @@ section {
     margin: 200px 0;
   }
 
+  .primaryHeader {
+    margin-top: 50px;
+
+  }
+
   .primaryHeader .columnRight .btnOpenMenuMobile {
     display: none;
   }
+
 
   .primaryHeader .columnRight {
     width: 80%;
