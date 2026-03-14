@@ -89,4 +89,4 @@ Versão actual: 1.0.0
 
 ---
 
-Desenvolvido com ❤️ por Viver de Código
+Desenvolvido com ❤️
