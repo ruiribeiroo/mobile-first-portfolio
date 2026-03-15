@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
-    <head>
-        <title>Hello World</title>
-        <meta charset="UTF-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link 
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body class="stack-page">
-        <div class="container">
-            <header class="primaryHeader">
+
+<head>
+    <title>Hello World</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="stack-page">
+    <div class="container">
+        <header class="primaryHeader">
             <div class="columnLeft">
-                <h2>RR</h2>
+                <a href="index.html">RR</a>
                 <button id="toggleDarkMode" onclick="toggleDarkMode()">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                    width="24" 
-                    height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
-                    class="lucide lucide-moon-icon lucide-moon">
-                    <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-moon-icon lucide-moon">
+                        <path
+                            d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
                     </svg>
                 </button>
             </div>
@@ -50,34 +46,105 @@
                             <a href="contact.html">Contacto</a>
                         </li>
                         <li>
-                            <a href="https://github.com/FilipeCovas" target="_blank">
-                                <img 
-                                src="assets/images/logos_github.png" 
-                                alt="icon github" 
-                                width="30" 
-                                height="30"/>
-                            </a>    
+                            <a href="https://github.com/ruiribeiroo" target="_blank">
+                                <img src="assets/images/logos_github.png" alt="icon github" width="30" height="30" />
+                            </a>
                         </li>
                         <li>
                             <a href="https://x.com/ruiribeirooo" target="_blank">
-                                <img 
-                                src="assets/images/icon-twitter.png" 
-                                alt="icon twitter" 
-                                width="30" 
-                                height="30"/>
+                                <img src="assets/images/icon-twitter.png" alt="icon twitter" width="30" height="30" />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/rui-ribeiro-93a347181/" target="_blank">
-                                <img 
-                                src="assets/images/icon-linkedin.png" 
-                                alt="icon linkedin" 
-                                width="30" 
-                                height="30"/>
+                                <img src="assets/images/icon-linkedin.png" alt="icon linkedin" width="30" height="30" />
                             </a>
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <div class="menuMobileWrapper">
+                <button onclick="openMenuMobile()" class="btnOpenMenuMobile">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.33337 6.66667H26.6667" stroke="white" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5.33337 16H26.6667" stroke="white" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5.33337 25.3333H26.6667" stroke="white" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="drawerMenu">
+                    <div>
+                        <button onclick="closeMenuMobile()" class="btnCloseMenuMobile">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M29.2917 4.625H7.70833C6.00546 4.625 4.625 6.00546 4.625 7.70833V29.2917C4.625 30.9945 6.00546 32.375 7.70833 32.375H29.2917C30.9945 32.375 32.375 30.9945 32.375 29.2917V7.70833C32.375 6.00546 30.9945 4.625 29.2917 4.625Z"
+                                    stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23.125 4.625V32.375" stroke="#42446E" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.3334 13.875L16.9584 18.5L12.3334 23.125" stroke="#42446E" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">Sobre mim</a>
+                                </li>
+                                <li>
+                                    <a href="stack.html">Stack</a>
+                                </li>
+                                <li>
+                                    <a href="projects.html">Projetos</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footerWrapper">
+                        <div class="mainFooter">
+                            <div class="mainFooterColumn left">
+                                <h2>RR</h2>
+                            </div>
+                            <div class="mainFooterColumn right">
+                                <div>
+                                    <a href="mailto:">ruifmr94@gmail.com</a>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href="https://github.com/FilipeCovas" target="_blank">
+                                                <img src="assets/images/logos_github.png" alt="icon github" width="30"
+                                                    height="30" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://x.com/ruiribeirooo" target="_blank">
+                                                <img src="assets/images/icon-twitter.png" alt="icon twitter" width="30"
+                                                    height="30" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/rui-ribeiro-93a347181/"
+                                                target="_blank">
+                                                <img src="assets/images/icon-linkedin.png" alt="icon linkedin"
+                                                    width="30" height="30" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </footer>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -88,80 +155,22 @@
                     <h3>Tecnologias com que trabalho</h3>
                 </header>
                 <div class="stackImagesContainer">
-                    <img 
-                        src="assets/images/vscode-icons_file-type-html.png" 
-                        alt="html" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/vscode-icons_file-type-css.png" 
-                        alt="css" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/vscode-icons_file-type-js-official.png" 
-                        alt="javascript" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/logos_react.png" 
-                        alt="react" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/electron.png" 
-                        alt="electron" 
-                        width="120"
-                    />
-                     <img 
-                        src="assets/images/logos_bootstrap.png" 
-                        alt="bootstrap" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/vscode-icons_file-type-tailwind.png" 
-                        alt="tailwind" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/logos_sass.png" 
-                        alt="sass" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/logos_git-icon.png" 
-                        alt="git" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/vscode-icons_file-type-vscode.png" 
-                        alt="vscode" 
-                        width="120"
-                    />
-                    <img 
-                        src="assets/images/cib_greensock (1).png" 
-                        alt="greensock" 
-                        width="120"
-                        class="imageDark"
-                    />
-                    <img 
-                        src="assets/images/cib_greensock_black.png" 
-                        alt="greensock" 
-                        width="120"
-                        class="imageLight"
-                    />
-                    <img 
-                        src="assets/images/akar-icons_github-fill (1).png" 
-                        alt="github" 
-                        width="120"
-                        class="imageDark"
-                    />
-                    <img 
-                        src="assets/images/akar-icons_github-fill_black.png" 
-                        alt="github" 
-                        width="120"
-                        class="imageLight"
-                    />
+                    <img src="assets/images/vscode-icons_file-type-html.png" alt="html" width="120" />
+                    <img src="assets/images/vscode-icons_file-type-css.png" alt="css" width="120" />
+                    <img src="assets/images/vscode-icons_file-type-js-official.png" alt="javascript" width="120" />
+                    <img src="assets/images/logos_react.png" alt="react" width="120" />
+                    <img src="assets/images/electron.png" alt="electron" width="120" />
+                    <img src="assets/images/logos_bootstrap.png" alt="bootstrap" width="120" />
+                    <img src="assets/images/vscode-icons_file-type-tailwind.png" alt="tailwind" width="120" />
+                    <img src="assets/images/logos_sass.png" alt="sass" width="120" />
+                    <img src="assets/images/logos_git-icon.png" alt="git" width="120" />
+                    <img src="assets/images/vscode-icons_file-type-vscode.png" alt="vscode" width="120" />
+                    <img src="assets/images/cib_greensock (1).png" alt="greensock" width="120" class="imageDark" />
+                    <img src="assets/images/cib_greensock_black.png" alt="greensock" width="120" class="imageLight" />
+                    <img src="assets/images/akar-icons_github-fill (1).png" alt="github" width="120"
+                        class="imageDark" />
+                    <img src="assets/images/akar-icons_github-fill_black.png" alt="github" width="120"
+                        class="imageLight" />
                 </div>
             </section>
             <footer class="footerWrapper">
@@ -175,62 +184,54 @@
                         </div>
                         <div>
                             <ul>
-                            <li>
-                            <a href="https://github.com/FilipeCovas" target="_blank">
-                                <img 
-                                src="assets/images/logos_github.png" 
-                                alt="icon github" 
-                                width="30" 
-                                height="30"/>
-                            </a>    
-                        </li>
-                        <li>
-                            <a href="https://x.com/ruiribeirooo" target="_blank">
-                                <img 
-                                src="assets/images/icon-twitter.png" 
-                                alt="icon twitter" 
-                                width="30" 
-                                height="30"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/rui-ribeiro-93a347181/" target="_blank">
-                                <img 
-                                src="assets/images/icon-linkedin.png" 
-                                alt="icon linkedin" 
-                                width="30" 
-                                height="30"/>
-                            </a>
-                        </li>
-                        </ul>
+                                <li>
+                                    <a href="https://github.com/FilipeCovas" target="_blank">
+                                        <img src="assets/images/logos_github.png" alt="icon github" width="30"
+                                            height="30" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/ruiribeirooo" target="_blank">
+                                        <img src="assets/images/icon-twitter.png" alt="icon twitter" width="30"
+                                            height="30" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/rui-ribeiro-93a347181/" target="_blank">
+                                        <img src="assets/images/icon-linkedin.png" alt="icon linkedin" width="30"
+                                            height="30" />
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="miniFooter">
-                     <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Sobre mim</a>
-                        </li>
-                        <li>
-                            <a href="stack.html">Stack</a>
-                        </li>
-                        <li>
-                            <a href="projects.html">Projetos</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contacto</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html">Sobre mim</a>
+                            </li>
+                            <li>
+                                <a href="stack.html">Stack</a>
+                            </li>
+                            <li>
+                                <a href="projects.html">Projetos</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </footer>
         </main>
-        </div>
-        <script src="js/main.js"></script>
-    </body>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
