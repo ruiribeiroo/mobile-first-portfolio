@@ -102,15 +102,18 @@ section {
   stroke: var(--colorText);
 }
 
-.primaryHeader .columnLeft h2 {
+.primaryHeader .columnLeft a {
   font-size: 4rem;
   font-weight: var(--fontWeightBold);
+  color: var(--colorText);
+  text-decoration: none;
 }
 
 .primaryHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .btnOpenMenuMobile,
@@ -271,6 +274,9 @@ section {
 .projectContent h4 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  /* propriedade padrão */
+  line-clamp: 2;
+  /* propriedade padrão */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0;
@@ -280,6 +286,9 @@ section {
 .projectContent p {
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  /* propriedade padrão */
+  line-clamp: 5;
+  /* propriedade padrão */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -497,6 +506,17 @@ section {
 
 /*DESKTOP*/
 @media (min-width: 769px) {
+
+  /*
+*
+* ABOUT PAGE
+*
+*/
+
+  .expList.secondList {
+    border-bottom: 2px solid var(--colorBorder);
+  }
+
 
   /*
 *
@@ -732,12 +752,14 @@ expSecondLine*/
   .about-page .expList .expListItem {
     padding-bottom: 20px;
     border-bottom: 2px solid var(--colorBorder);
+    margin-bottom: 30px;
   }
 
   .about-page .expList .expFirstLine {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   .about-page .expList .expFirstLine h3 {
@@ -779,23 +801,6 @@ expSecondLine*/
 
   .projects-page .sectionProjects header {
     text-align: left;
-  }
-
-  .contact-page .sectionContact {
-    margin: 200px 0;
-    text-align: center;
-  }
-
-  .contact-page .sectionContact h1 {
-    margin-bottom: 0;
-  }
-
-  .contact-page .sectionContact .contentEmail {
-    background: var(--primaryGradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 5.8rem;
-    font-weight: var(--fontWeightBold);
   }
 }
 
@@ -903,9 +908,13 @@ expSecondLine*/
   margin: 0;
 }
 
+.expList.secondList .expListItem {
+  border-bottom: none;
+}
+
 .about-page .expList .expListItem {
   padding-bottom: 20px;
-  border-bottom: 2px solid var(--colorBorder);
+  margin-bottom: 30px;
 }
 
 .about-page .expList .expFirstLine {
@@ -930,7 +939,7 @@ expSecondLine*/
 }
 
 .about-page .expList .expSecondLine {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
 }
@@ -947,10 +956,6 @@ expSecondLine*/
   color: var(--colorP);
 }
 
-.stack-page .sectionStack header {
-  text-align: left;
-}
-
 .projects-page .sectionProjects header {
   text-align: left;
 }
@@ -962,12 +967,13 @@ expSecondLine*/
 
 .contact-page .sectionContact h1 {
   margin-bottom: 0;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
 }
 
 .contact-page .sectionContact .contentEmail {
   background: var(--primaryGradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5.8rem;
+  font-size: clamp(2.8rem, 5vw, 5.8rem);
   font-weight: var(--fontWeightBold);
 }
